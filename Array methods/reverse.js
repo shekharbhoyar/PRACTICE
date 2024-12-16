@@ -25,4 +25,5 @@ import data from "../data.js";
 // use a high order function
 
 const hofarray = Array.from({ length: 5 }, (_, i) => i);
+
 export default hofarray;
