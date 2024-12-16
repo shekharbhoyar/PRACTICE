@@ -13,10 +13,16 @@ import data from "../data.js";
 
 // export default loopfuction;
 
-const results = [];
+// store the data in a variable then export it
+// const results = [];
 
-for (let i = 0; i < 5; i++) {
-  results.push(i);
-}
+// for (let i = 0; i < 5; i++) {
+//   results.push(i);
+// }
 
-export default results;
+// export default results;
+
+// use a high order function
+
+const hofarray = Array.from({ length: 5 }, (_, i) => i);
+export default hofarray;
