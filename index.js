@@ -1,4 +1,6 @@
+import hofarray from "./Array methods/reverse.js";
 import loopfuction from "./Array methods/reverse.js";
 import results from "./Array methods/reverse.js";
 // loopfuction();
-console.log(results);
+// console.log(results);
+console.log(hofarray);
