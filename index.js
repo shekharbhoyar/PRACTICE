@@ -673,15 +673,30 @@ let obj1 = {
   a: 10,
   b: 20,
   sum() {
-    return this.a + this.b;
+    console.log(this.a + this.b);
   },
 };
-const res = obj1.sum();
-// console.log(typeof res);
+// const res = obj1.sum();
+const res = obj1["sum"];
+console.log(typeof res);
 
 let AB = "myName";
 let CD = "mySurname";
 let result1 = AB && CD;
 // console.log(result1);
 
+const obj2 = {
+  name: "dhumketu",
+  surname: "zhatka",
+  address: "furfurinagar",
+};
+for (const key in obj2) {
+  // console.log(key);
+  // console.log(obj2[key]);
+}
 
+// all about && operator
+// && operator doesnt convert values into boolean value it just check them
+// we can get the output in the form of boolean value by using !!
+console.log(!!(1 && 2 && 0 && 3));
+console.log(1 && 2 && 3);
