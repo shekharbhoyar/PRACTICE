@@ -1,0 +1,182 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Content</title>
+    <style>
+        #content {
+            display: none; /* Initially hidden */
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Show Content</button>
+    <div id="content">This is the content to show or hide.</div>
+
+    <script>
+        // JavaScript to toggle content visibility
+        const button = document.getElementById("toggleButton");
+        const content = document.getElementById("content");
+
+        button.onclick = function() {
+            if (content.style.display === "none") {
+                content.style.display = "block"; // Show the content
+                button.innerText = "Hide Content"; // Update button text
+            } else {
+                content.style.display = "none"; // Hide the content
+                button.innerText = "Show Content"; // Update button text
+            }
+        };
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button id="toggleButton">Show Content</button>
+    <div id="container">this is the content</div>
+
+    <script>
+      const button = document.getElementById("toggleButton");
+      const content = document.getElementById("container");
+      button.onclick = function () {
+        if (content.style.display === "none") {
+          content.style.display = "block";
+          button.innerText = "Hide Content";
+        } else {
+          content.style.display = "none";
+          button.innerText = "Show Content";
+        }
+      };
+    </script> -->
+    <body>
+      <!-- <button id="toggleButton">Show Content</button>
+      <div id="container">this is the content</div>
+
+      <style>
+        /* Initial styles for the container */
+        #container {
+          display: none; /* Hidden by default */
+          opacity: 0; /* Start with full transparency */
+          transform: scale(0.8); /* Slightly shrink the size */
+          transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+          background-color: lightblue; /* Add background color */
+          padding: 20px; /* Add some padding */
+          border-radius: 10px; /* Rounded corners */
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for pop effect */
+        }
+
+        /* Active state when the container is visible */
+        #container.active {
+          display: block; /* Ensure it is visible */
+          opacity: 1; /* Full opacity */
+          transform: scale(1); /* Full size */
+        }
+      </style>
+
+      <script>
+        const button = document.getElementById("toggleButton");
+        const content = document.getElementById("container");
+
+        button.onclick = function () {
+          if (content.classList.contains("active")) {
+            // Hide the content
+            content.classList.remove("active");
+            setTimeout(() => {
+              content.style.display = "none"; // Fully hide after transition
+            }, 300); // Match the transition duration
+            button.innerText = "Show Content";
+          } else {
+            // Show the content
+            content.style.display = "block"; // Make it visible
+            setTimeout(() => content.classList.add("active"), 10); // Add the active class after display is set
+            button.innerText = "Hide Content";
+          }
+        };
+      </script> -->
+
+      <body>
+        <button id="toggleButton">Show Content</button>
+        <div id="container">This is the content</div>
+
+        <style>
+          /* Initial styles for the container */
+          #container {
+            display: none;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            background-color: lightblue;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+          }
+
+          /* Active state for the container (visible and scaled) */
+          #container.active {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+          }
+
+          /* Button styles */
+          #toggleButton {
+            /* padding: 10px;
+            background-color: lightgray;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer; */
+            padding: 10px 20px;
+            background-color: lightgray;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.1s ease, box-shadow 0.1s ease; /* Smooth transition for shrink effect */
+          }
+
+          /* Active state for the button (clicked) */
+          #toggleButton.active {
+            /* background-color: green;
+            color: white; */
+            transform: scale(0.95); /* Shrink the button slightly */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow for a pressed effect */
+          }
+        </style>
+
+        <script>
+          const button = document.getElementById("toggleButton");
+          const content = document.getElementById("container");
+
+          button.onclick = function () {
+            // Toggle the active class for the button
+            button.classList.toggle("active");
+
+            if (content.classList.contains("active")) {
+              // Hide the content
+              content.classList.remove("active");
+              setTimeout(() => {
+                content.style.display = "none"; // Fully hide after transition
+              }, 300); // Match the transition duration
+              button.innerText = "Show Content";
+            } else {
+              // Show the content
+              content.style.display = "inline-block"; // Make it visible
+              setTimeout(() => content.classList.add("active"), 10); // Add the active class after display is set
+              button.innerText = "Hide Content";
+            }
+          };
+        </script>
+      </body>
+    </body>
+  </body>
+</html>
