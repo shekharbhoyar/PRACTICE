@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>P</label><input id="p" type="number" /><br /><br />
+    <label>R</label><input id="r" type="number" /><br /><br />
+    <label>T</label><input id="t" type="number" /><br /><br />
+    <button onclick="result()">Calculate</button>
+    <div id="result-div"></div>
+
+    <script>
+      function result() {
+        let P = document.getElementById("p").value;
+        let R = document.getElementById("r").value;
+        let T = document.getElementById("t").value;
+
+        let SI = (P * R * T) / 100;
+        document.getElementById("result-div").innerHTML = SI;
+      }
+    </script>
+  </body>
+</html>
