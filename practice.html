@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .myclass {
+      position: fixed;
+      height: 150px;
+      left: 0px;
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding: 10px;
+      gap: 20px;
+      color: aliceblue;
+      box-sizing: border-box;
+      background-color: rgb(98, 17, 93);
+      transition: 1s;
+      border-radius: 10px;
+    }
+    .hidden {
+      left: -100px;
+    }
+  </style>
+  <body>
+    <button id="btn" class="mybtn" onclick="getheader()">=</button>
+    <div id="header" class="myclass">
+      <div>Home</div>
+      <div>About</div>
+      <div>Contact</div>
+      <div>Career</div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quis
+      similique incidunt minima labore, ex praesentium eligendi, dolorem
+      quibusdam iusto ut voluptatum error accusamus officia. Ab corporis et,
+      deserunt rem accusamus minus sed minima, ratione, fuga hic delectus earum
+      commodi voluptates id excepturi inventore consequuntur sit veniam
+      repellendus eligendi perspiciatis?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+      voluptatem.
+    </p>
+    <script>
+      function getheader() {
+        let item = document.getElementById("header");
+        item.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>

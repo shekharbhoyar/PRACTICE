@@ -33,15 +33,15 @@
 </body>
 </html> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-    <!-- <button id="toggleButton">Show Content</button>
+  <body> -->
+<!-- <button id="toggleButton">Show Content</button>
     <div id="container">this is the content</div>
 
     <script>
@@ -57,8 +57,8 @@
         }
       };
     </script> -->
-    <body>
-      <!-- <button id="toggleButton">Show Content</button>
+<!-- <body> -->
+<!-- <button id="toggleButton">Show Content</button>
       <div id="container">this is the content</div>
 
       <style>
@@ -103,7 +103,7 @@
         };
       </script> -->
 
-      <body>
+<!-- <body>
         <button id="toggleButton">Show Content</button>
         <div id="container">This is the content</div>
 
@@ -178,5 +178,78 @@
         </script>
       </body>
     </body>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button onclick="showAlert()">Introduction</button> -->
+    <!-- <button onclick="toggle()">Click Me</button> -->
+    <!-- <button id="my-btn" onclick="changePara()">Click Me</button>
+    <p id="my-para">before click Iam Changu</p> -->
+    <button id="btn" onclick="changeColor()">Click Me</button>
+    <script>
+      // function showAlert() {
+      //   // for (let i = 0; i < 10; i++) {
+      //   //   document.body.innerHTML += "<p>Some New Content</p>";
+      //   // }
+      //   document.body.innerHTML+=""
+      // }
+
+      // function toggle() {
+      //   document.body.innerHTML +=
+      //     "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam dolorem voluptate alias,  repellendus architecto vel vero odit soluta quia quod?</p>";
+      // }
+
+      // function changePara() {
+      //   let myBtn = document.getElementById("my-btn");
+      //   myBtn.innerHTML = "Clicked";
+
+      //   let myPara = document.getElementById("my-para");
+      //   myPara.innerHTML = "after clicked I am Mangu";
+      // }
+      // function changeColor() {
+      //   // let mybtn = document.getElementById("btn");
+      //   // let color;
+      //   // if (color) {
+      //   //   mybtn.style.backgroundColor = "red";
+      //   //   return (color = false);
+      //   // } else if (!color) {
+      //   //   mybtn.style.backgroundColor = "green";
+      //   //   return (color = true);
+      //   // }
+      //   // let open = null;
+      //   // if (open === null) {
+      //   //   let mybtn = document.getElementById("btn");
+      //   //   mybtn.style.backgroundColor = "red";
+      //   // } else {
+      //   //   mybtn.style.backgroundColor = "green";
+      //   // }
+      // }
+      // let color = "red";
+      // function changeColor() {
+      //   let btn = document.getElementById("btn");
+      //   btn.style.backgroundColor = color;
+      //   if (color == "red") {
+      //     color = "green";
+      //   } else {
+      //     color = "red";
+      //   }
+      // }
+      function changeColor() {
+        let btn = document.getElementById("btn");
+        if (btn.style.backgroundColor == "green") {
+          btn.style.backgroundColor = "red";
+        } else {
+          btn.style.backgroundColor = "green";
+        }
+      }
+    </script>
   </body>
 </html>

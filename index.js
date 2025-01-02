@@ -653,7 +653,7 @@ function createPassword() {
   let ultresult = result.toString();
   return ultresult;
 }
-console.log(createPassword());
+// console.log(createPassword());
 
 function password(maxlength) {
   let password = [];
@@ -678,7 +678,7 @@ let obj1 = {
 };
 // const res = obj1.sum();
 const res = obj1["sum"];
-console.log(typeof res);
+// console.log(typeof res);
 
 let AB = "myName";
 let CD = "mySurname";
@@ -698,5 +698,59 @@ for (const key in obj2) {
 // all about && operator
 // && operator doesnt convert values into boolean value it just check them
 // we can get the output in the form of boolean value by using !!
-console.log(!!(1 && 2 && 0 && 3));
-console.log(1 && 2 && 3);
+// console.log(!!(1 && 2 && 0 && 3));
+// console.log(1 && 2 && 3);
+let foo = "12";
+function doSome() {
+  foo = "24";
+  return;
+  function foo() {}
+}
+// doSome();
+// console.log(foo);
+// let greet = "hii";
+// function hiFunction() {
+//   greet = "hello";
+//   return greet;
+//   function greet() {}
+// }
+// hiFunction();
+// console.log(hiFunction());
+// console.log(greet);
+
+
+
+
+
+
+let greet="hi"
+ function hiFunction(){
+   greet= "hello"
+   return;
+   function greet(){ }
+ }
+ hiFunction()
+ console.log(greet)
+
+ function  myFunf(){}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
