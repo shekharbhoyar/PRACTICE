@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    I agree to the terms and conditions
+    <input type="checkbox" onchange="onchange1()" id="element" />
+    <button disabled onclick="check()" id="mybtn">submit</button>
+
+    <script>
+      function onchange1() {
+        if (document.getElementById("element").checked) {
+          document.getElementById("mybtn").disabled = false;
+        } else {
+          document.getElementById("mybtn").disabled = true;
+        }
+      }
+      function check() {
+        alert("submitted");
+      }
+    </script>
+  </body>
+</html>
