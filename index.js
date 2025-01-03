@@ -718,39 +718,86 @@ function doSome() {
 // console.log(hiFunction());
 // console.log(greet);
 
+let greet = "hi";
+function hiFunction() {
+  greet = "hello";
+  return;
+  function greet() {}
+}
+//  hiFunction()
+//  console.log(greet)
 
+//  function  myFunf(){}
 
+let userCommand = "What is the weather like today?";
+let findCommand =
+  userCommand.split(" ").findIndex((e) => e === "weather") !== -1;
+// console.log(findCommand)
+// let user1 = {
+//   name: "Daemon Targaryen",
+// };
 
+// let parents = {
+//   father: "Baelon Targaryen",
+//   mother: "Alyssa Targaryen",
+// };
 
+// let life = {
+//   born: "81 AC",
+//   died: "130 AC",
+// };
 
-let greet="hi"
- function hiFunction(){
-   greet= "hello"
-   return;
-   function greet(){ }
- }
- hiFunction()
- console.log(greet)
+// let daemon = {
+//   name: user1.name,
+//   parents: parents,
+//   life: life,
+// };
+// console.log(daemon);
+let user1 = {
+  name: "Daemon Targaryen",
+};
 
- function  myFunf(){}
- 
+let parents = {
+  father: "Baelon Targaryen",
+  mother: "Alyssa Targaryen",
+};
 
+let life = {
+  born: "81 AC",
+  died: "130 AC",
+};
 
+let daemon = {
+  ...user1,
+  ...parents,
+  ...life,
+};
+// console.log(daemon);
+class Learner {
+  #name;
+  #age;
+  constructor(name, age) {
+    this.#name = name;
+    this.#age = age;
+  }
+  get learnerName() {
+    return this.name;
+  }
+}
 
+let Derek = new Learner("Derek", "22");
+// console.log(Derek.learnerName);
+let x = 25;
+function outer(x) {
+  return function inner() {
+    console.log(x);
+  };
+}
 
+// let getClosure = outer(20);
+// getClosure(26);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(typeof ("2" + 3));//string
+console.log(typeof ("2" - 3));//Number
+console.log(typeof "2" + 3);//string3
+console.log(typeof "2" - 3);//NaN

@@ -14,12 +14,21 @@
 
     <script>
       function result() {
-        let P = document.getElementById("p").value;
-        let R = document.getElementById("r").value;
-        let T = document.getElementById("t").value;
+        let P = Number(document.getElementById("p").value);
+        let R = Number(document.getElementById("r").value);
+        let T = Number(document.getElementById("t").value);
+        // let item1 = document.getElementById("p");
+        // let principle = item.value;
+        // let item2 = document.getElementById("r");
+        // let rate = item2.value;
+        // let item3 = document.getElementById("t");
+        // let time = item3.value;
 
         let SI = (P * R * T) / 100;
-        document.getElementById("result-div").innerHTML = SI;
+        let total = SI + P;
+        document.getElementById(
+          "result-div"
+        ).innerHTML = `Inetrest:${SI}<br/> Total Amount:${total}`;
       }
     </script>
   </body>
