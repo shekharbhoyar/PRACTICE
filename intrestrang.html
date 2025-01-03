@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>P</label
+    ><input
+      id="amount"
+      type="range"
+      value="0"
+      step="1"
+      min="0"
+      max="1000000"
+      onchange="calculate()"
+    />
+    <p id="amountP"></p>
+
+    <label>R</label
+    ><input
+      id="rate"
+      type="range"
+      value="0"
+      step="1"
+      min="0"
+      max="100"
+      onchange="calculate()"
+    />
+    <p id="rateP"></p>
+
+    <label>T</label
+    ><input
+      id="time"
+      type="range"
+      value="0"
+      step="1"
+      min="0"
+      max="100"
+      onchange="calculate()"
+    />
+    <p id="timeP"></p>
+
+    <div id="result"></div>
+    <script>
+      function calculate() {
+        let amount = parseFloat(document.getElementById("amount").value);
+        document.getElementById("amountP").innerHTML = amount;
+        let rate = parseFloat(document.getElementById("rate").value);
+        document.getElementById("rateP").innerHTML = rate;
+        let time = parseFloat(document.getElementById("time").value);
+        document.getElementById("timeP").innerHTML = time;
+        let result = (amount * rate * time) / 100;
+        let totalAmount = result + amount;
+
+        document.getElementById(
+          "result"
+        ).innerHTML = `Interest : ${result.toFixed(
+          2
+        )} <br>Total Amount : ${totalAmount.toFixed(2)}`;
+      }
+      calculate();
+    </script>
+  </body>
+</html>
